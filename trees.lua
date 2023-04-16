@@ -32,8 +32,8 @@ while(true) do
       turtle.turnLeft()
       harvest()
     end
-    turtle.turnRight()
-  if(pos ~= FarmSize-1) then
+  turtle.turnRight()
+	if(pos ~= FarmSize-1) then
       for i = 0, FarmPadding-1 do
         turtle.dig()
         turtle.forward()
