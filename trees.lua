@@ -10,14 +10,14 @@ local function harvest()
   repeat
     turtle.digUp() 
     turtle.up() 
-    if(turtle.getItemCount(2) < 63) then
+    if(turtle.getItemCount(2) > 63) then
       turtle.select(2)
       turtle.drop()
     end
-  until(!turtle.compareUp())
+  until(not turtle.compareUp())
 
   os.sleep(5)
-  repeat until(!turtle.down())
+  repeat until(not turtle.down())
   turtle.back()
 end
 
