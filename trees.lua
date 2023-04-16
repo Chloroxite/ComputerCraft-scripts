@@ -33,7 +33,7 @@ while(true) do
       harvest()
     end
   turtle.turnRight()
-	if(pos ~= FarmSize-1) then
+  if(pos ~= FarmSize-1) then
       for i = 0, FarmPadding-1 do
         turtle.dig()
         turtle.forward()
