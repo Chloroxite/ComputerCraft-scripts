@@ -21,9 +21,14 @@ local function harvest()
 end
 
 local function reset(size)
+  turtle.turnLeft()
+  turtle.turnLeft()
   for pos = 0, FarmPadding*(size-1)-1 do
-    turtle.back()
+    turtle.forward()
+    turtle.dig()
   end
+  turtle.turnLeft()
+  turtle.turnLeft()
 end
 
 while(true) do
