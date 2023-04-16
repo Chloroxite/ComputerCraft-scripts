@@ -6,13 +6,14 @@ sleepTime = 20
 local function harvest()
   turtle.dig()
   turtle.forward()
-  turtle.drop(1)
   turtle.digDown()
-  turtle.drop(1)
   while(turtle.compareUp()) do
-    turtle.digUp()
-    turtle.drop(1)
-    turtle.up()
+    turtle.digUp() 
+    turtle.up() 
+    if(turtle.getItemCount(2) < 63) then
+      turtle.select(2)
+      turtle.drop()
+    end
   end
   os.sleep(5)
   while(turtle.down()) do end
