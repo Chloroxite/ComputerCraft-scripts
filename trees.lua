@@ -10,10 +10,9 @@ local function harvest()
   repeat
     turtle.digUp() 
     turtle.up() 
-    if(turtle.getItemCount(2) > 63) then
-      turtle.select(2)
-      turtle.drop()
-    end
+    turtle.select(2)
+    turtle.drop()
+    turtle.select(1)
   until(not turtle.compareUp())
 
   os.sleep(5)
