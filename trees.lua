@@ -29,12 +29,12 @@ end
 while(true) do
   --Begin cycle
   for pos = 0, FarmSize-1 do
-    if(turtle.compare()) then
-      turtle.turnLeft()
+    turtle.turnLeft()
+    if(turtle.compare()) then 
       harvest()
     end
-  turtle.turnRight()
-  if(pos ~= FarmSize-1) then
+    turtle.turnRight()
+    if(pos ~= FarmSize-1) then
       for i = 0, FarmPadding-1 do
         turtle.dig()
         turtle.forward()
