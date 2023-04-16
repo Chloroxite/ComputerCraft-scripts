@@ -28,17 +28,17 @@ end
 while(true) do
   --Begin cycle
   for pos = 0, FarmSize-1 do
-    turtle.turnLeft()
     if(turtle.compare()) then
+      turtle.turnLeft()
       harvest()
     end
     turtle.turnRight()
-	if(pos ~= FarmSize-1) then
-    	for i = 0, FarmPadding-1 do
-		  	turtle.dig()
-      	turtle.forward()
-    	end
-	  end
+  if(pos ~= FarmSize-1) then
+      for i = 0, FarmPadding-1 do
+        turtle.dig()
+        turtle.forward()
+      end
+    end
   end
   reset(FarmSize)
   os.sleep(sleepTime)
