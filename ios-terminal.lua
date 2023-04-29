@@ -4,20 +4,21 @@
 
 Deque = require("Deque.lua")
 
-function main()
-  --iOS commands (only really used for displaying correct usage in case of errors)
-  CmdUsage = {
-    ["about"]     = "Usage: about\nDisplays OS information",
-    ["help"]      = "Usage: help <command?>\nProvides help on OS or command usage.",
-    ["request"]   = "Usage: request <item> <amount>\nSends an item request to the master server.",
-    ["register"]  = "Usage: register" +
-                    "\nBegins item registration process." +
-                    "\nPlease ensure that no duplicates are introduced, and provide full stacks where possible." +
-                    "\nSystem will be unavailable during this process.",
-    ["search"]    = "Usage: search <item>",
-  }
-  --iOS configuration
-  --lol there's nothing here yet.
+--iOS commands (only really used for displaying correct usage in case of errors)
+CmdUsage = {
+  ["about"]     = "Usage: about\nDisplays OS information",
+  ["help"]      = "Usage: help <command?>\nProvides help on OS or command usage.",
+  ["request"]   = "Usage: request <item> <amount>\nSends an item request to the master server.",
+  ["register"]  = "Usage: register" +
+                  "\nBegins item registration process." +
+                  "\nPlease ensure that no duplicates are introduced, and provide full stacks where possible." +
+                  "\nSystem will be unavailable during this process.",
+  ["search"]    = "Usage: search <item>",
+}
+--iOS configuration
+--lol there's nothing here yet.
+
+function main() 
   --Actual code begins
   io.write("Welcome to IndexOS!")
   io.write("Connection to master server established.")
