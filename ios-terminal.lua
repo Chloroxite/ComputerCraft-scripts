@@ -32,18 +32,11 @@ function main()
 end
 
 function parseCommand(input)
-  local inputStack = Deque.new()
-  --Read input one word at a time and insert each word into a stack.
-  local buffer = ""
-  for i = 1, #Input do
-    if(Input[i] ~= " ") then
-      buffer = buffer .. Input[i]
-    end
-    if(Input[i] == " " or i == Input.len) then
-      inputStack:push(buffer)
-    end
+  --Split command into seperate arguments in a table. 
+  local args = {}
+  for s in input:gmatch("%S+") do
+      table.insert(args, s)
   end
-
   --Figure out what the command and parameters are.
   --Use pcall as try catch equivalent.
   
