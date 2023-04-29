@@ -1,8 +1,12 @@
+--Index Operating System is a storage network solution built in computercraft version 1.41.
+--ios-terminal.lua is a script designed to be used in a wireless terminal.
+--The script will interact with the master server, sending over any commands that require access to the index system itself.
+
 Deque = require("Deque.lua")
 
 function main()
   --iOS commands (only really used for displaying correct usage in case of errors)
-  Cmds = {
+  CmdUsage = {
     ["about"]     = "Usage: about\nDisplays OS information",
     ["help"]      = "Usage: help <command?>\nProvides help on OS or command usage.",
     ["request"]   = "Usage: request <item> <amount>\nSends an item request to the master server.",
